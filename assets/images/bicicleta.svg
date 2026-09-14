@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520">
+  <rect width="720" height="520" rx="24" fill="#e9eddf"/>
+  <circle cx="555" cy="130" r="100" fill="#d8dfc9"/>
+  <path d="M60 414H660" stroke="#c2cbb3" stroke-width="2"/>
+  <g fill="none" stroke="#233b32" stroke-width="10"><circle cx="190" cy="330" r="100"/><circle cx="540" cy="330" r="100"/></g>
+  <g fill="none" stroke="#8d9c87" stroke-width="2"><circle cx="190" cy="330" r="84"/><circle cx="540" cy="330" r="84"/><path d="M190 246V414M106 330H274M130 270L250 390M130 390L250 270M540 246V414M456 330H624M480 270L600 390M480 390L600 270"/></g>
+  <g fill="none" stroke="#b94824" stroke-width="12" stroke-linejoin="round"><path d="M190 330L273 190L352 330H190L275 214H489L352 330M474 157L540 330"/></g>
+  <g fill="none" stroke="#233b32" stroke-width="9" stroke-linecap="round"><path d="M273 190L260 160M230 159H286M474 157L465 126H508Q530 126 525 149M352 330L384 354H407"/><circle cx="352" cy="330" r="23"/></g>
+  <g fill="none" stroke="#526548" stroke-width="2"><path d="M518 234L600 185H652M352 360V450H443M152 259L106 192H58"/></g>
+  <g fill="#233b32" font-family="Arial, sans-serif" font-size="20" font-weight="bold"><text x="534" y="174">FRENOS</text><text x="366" y="477">TRANSMISIÓN</text><text x="48" y="181">RUEDAS</text></g>
+  <g fill="#b94824"><circle cx="518" cy="234" r="6"/><circle cx="352" cy="360" r="6"/><circle cx="152" cy="259" r="6"/></g>
+</svg>
