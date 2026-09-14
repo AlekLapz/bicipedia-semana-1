@@ -29,6 +29,15 @@ h3 { font-size: 1.25rem; }
 p { max-width: 68ch; }
 a { color: var(--accent); text-underline-offset: 0.25em; }
 a:hover { text-decoration-thickness: 0.15em; }
+/* El contorno identifica el foco sin depender del color de fondo. */
+a:focus, button:focus, input:focus, select:focus, textarea:focus { outline: 2px solid var(--focus); outline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.skip-link { position: absolute; top: 0.5rem; left: 1rem; z-index: 1; padding: 0.75rem 1rem; max-width: calc(100% - 2rem); background: var(--white); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
 button, input, select, textarea { font: inherit; }
 button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }

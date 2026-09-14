@@ -10,6 +10,7 @@
   <script src="js/formulario.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">bicipedia<span>CR / SERVICIO DE BICICLETAS</span></a>
@@ -23,7 +24,7 @@
       </nav>
     </div>
   </header>
-  <main id="contenido" class="container">
+  <main id="contenido" class="container" tabindex="-1">
     <section class="section form-section" aria-labelledby="titulo-formulario">
       <p class="eyebrow">EL PRIMER PASO</p><h1 id="titulo-formulario">Contanos sobre tu bici.</h1>
       <p class="lead">Prepará una solicitud de servicio a domicilio.</p>
@@ -41,13 +42,13 @@
           <div class="form-grid">
             <div class="form-field"><label for="servicio">Tipo de servicio *</label><select id="servicio" name="servicio" required><option value="">Seleccioná un servicio</option><option value="mantenimiento">Mantenimiento general</option><option value="ajustes">Frenos y transmisión</option><option value="diagnostico">Diagnóstico</option></select></div>
             <div class="form-field"><label for="fecha">Fecha preferida (opcional)</label><input type="date" id="fecha" name="fecha"></div>
-            <div class="form-field full-width"><label for="comentarios">Comentarios (opcional)</label><textarea id="comentarios" name="comentarios" rows="5"></textarea><small id="ayuda-comentarios">Podés describir el tipo de bicicleta, el problema, la zona de recolección y el horario preferido. Usá información ficticia en esta práctica.</small></div>
+            <div class="form-field full-width"><label for="comentarios">Comentarios (opcional)</label><textarea id="comentarios" name="comentarios" rows="5" aria-describedby="ayuda-comentarios"></textarea><small id="ayuda-comentarios">Podés describir el tipo de bicicleta, el problema, la zona de recolección y el horario preferido. Usá información ficticia en esta práctica.</small></div>
           </div>
         </fieldset>
         <div class="checkbox-field"><input type="checkbox" id="terminos" name="terminos" required><label for="terminos">Acepto los términos de esta demostración: los datos son de prueba y no se reserva ni se envía una solicitud. *</label></div>
         <div class="actions"><button type="submit" disabled>Probar solicitud</button><a href="listado.html">Volver a las solicitudes</a></div>
         <noscript><p class="notice">Activá JavaScript para probar la validación sin enviar datos. Las cuatro vistas se pueden consultar sin JavaScript.</p></noscript>
-        <p id="resultado" class="notice" role="status" hidden>Validación completada. Esta solicitud es de prueba; no se envió ni se guardó.</p>
+        <p id="resultado" class="notice" role="status" tabindex="-1" hidden>Validación completada. Esta solicitud es de prueba; no se envió ni se guardó.</p>
       </form>
     </section>
   </main>

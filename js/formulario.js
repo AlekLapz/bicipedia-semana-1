@@ -4,5 +4,6 @@ const resultado = document.querySelector('#resultado');
 formulario.addEventListener('submit', (evento) => {
   evento.preventDefault();
   resultado.hidden = false;
+  resultado.focus();
 });
 formulario.querySelector('button[type="submit"]').disabled = false;

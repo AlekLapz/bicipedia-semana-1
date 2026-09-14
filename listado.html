@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">bicipedia<span>CR / SERVICIO DE BICICLETAS</span></a>
@@ -22,12 +23,12 @@
       </nav>
     </div>
   </header>
-  <main id="contenido" class="container">
+  <main id="contenido" class="container" tabindex="-1">
     <section class="section" aria-labelledby="titulo-listado">
       <div class="page-heading"><div><p class="eyebrow">RECOLECCIÓN Y ENTREGA</p><h1 id="titulo-listado">Solicitudes de servicio</h1><p class="lead">Un vistazo a la información inicial para coordinar cada bicicleta.</p></div><a class="button" href="formulario.html">Nueva solicitud <span aria-hidden="true">↗</span></a></div>
       <p class="notice">Los cinco registros son ficticios y no cambian al probar el formulario.</p>
       <p id="ayuda-tabla" class="note">En pantallas pequeñas, desplazá la tabla horizontalmente para consultar todas las columnas.</p>
-      <div class="table-scroll">
+      <div class="table-scroll" role="region" aria-label="Tabla de solicitudes" aria-describedby="ayuda-tabla" tabindex="0">
         <table>
           <caption>Solicitudes de ejemplo de Bicipedia CR · septiembre de 2026</caption>
           <thead><tr><th scope="col">Solicitud</th><th scope="col">Cliente</th><th scope="col">Servicio</th><th scope="col">Fecha preferida</th><th scope="col">Estado</th></tr></thead>
