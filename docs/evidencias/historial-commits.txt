@@ -1,0 +1,12 @@
+Carlos Andres Chavarria Quiros <carlos.chavarriaquiros@ucr.ac.cr>
+documenta las decisiones y pruebas de Bicipedia
+
+Carlos Andres Chavarria Quiros <carlos.chavarriaquiros@ucr.ac.cr>
+mejora la accesibilidad y navegación por teclado
+
+Carlos Andres Chavarria Quiros <carlos.chavarriaquiros@ucr.ac.cr>
+agrega el diseño responsive de Bicipedia
+
+Carlos Andres Chavarria Quiros <carlos.chavarriaquiros@ucr.ac.cr>
+crea las cuatro vistas de Bicipedia
+

@@ -1,0 +1,18 @@
+[
+  {
+    "par": "Texto principal",
+    "contraste": 11.2
+  },
+  {
+    "par": "Texto secundario",
+    "contraste": 6.19
+  },
+  {
+    "par": "Botón",
+    "contraste": 6.34
+  },
+  {
+    "par": "Foco",
+    "contraste": 6.43
+  }
+]

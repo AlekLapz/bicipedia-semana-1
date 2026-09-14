@@ -1,0 +1,519 @@
+{
+  "date": "2026-09-14T19:01:37.723Z",
+  "browser": "Microsoft Edge / Chromium",
+  "responsive": [
+    {
+      "page": "index",
+      "height": 568,
+      "width": 320,
+      "document": 320,
+      "images": [
+        {
+          "loaded": true,
+          "fits": true
+        }
+      ],
+      "columns": null
+    },
+    {
+      "page": "listado",
+      "height": 568,
+      "width": 320,
+      "document": 320,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "formulario",
+      "height": 568,
+      "width": 320,
+      "document": 320,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "dashboard",
+      "height": 568,
+      "width": 320,
+      "document": 320,
+      "images": [],
+      "columns": "288px"
+    },
+    {
+      "page": "index",
+      "height": 667,
+      "width": 375,
+      "document": 375,
+      "images": [
+        {
+          "loaded": true,
+          "fits": true
+        }
+      ],
+      "columns": null
+    },
+    {
+      "page": "listado",
+      "height": 667,
+      "width": 375,
+      "document": 375,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "formulario",
+      "height": 667,
+      "width": 375,
+      "document": 375,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "dashboard",
+      "height": 667,
+      "width": 375,
+      "document": 375,
+      "images": [],
+      "columns": "343px"
+    },
+    {
+      "page": "index",
+      "height": 1024,
+      "width": 768,
+      "document": 768,
+      "images": [
+        {
+          "loaded": true,
+          "fits": true
+        }
+      ],
+      "columns": null
+    },
+    {
+      "page": "listado",
+      "height": 1024,
+      "width": 768,
+      "document": 768,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "formulario",
+      "height": 1024,
+      "width": 768,
+      "document": 768,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "dashboard",
+      "height": 1024,
+      "width": 768,
+      "document": 768,
+      "images": [],
+      "columns": "352px 352px"
+    },
+    {
+      "page": "index",
+      "height": 768,
+      "width": 1024,
+      "document": 1024,
+      "images": [
+        {
+          "loaded": true,
+          "fits": true
+        }
+      ],
+      "columns": null
+    },
+    {
+      "page": "listado",
+      "height": 768,
+      "width": 1024,
+      "document": 1024,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "formulario",
+      "height": 768,
+      "width": 1024,
+      "document": 1024,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "dashboard",
+      "height": 768,
+      "width": 1024,
+      "document": 1024,
+      "images": [],
+      "columns": "232px 232px 232px 232px"
+    },
+    {
+      "page": "index",
+      "height": 900,
+      "width": 1280,
+      "document": 1280,
+      "images": [
+        {
+          "loaded": true,
+          "fits": true
+        }
+      ],
+      "columns": null
+    },
+    {
+      "page": "listado",
+      "height": 900,
+      "width": 1280,
+      "document": 1280,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "formulario",
+      "height": 900,
+      "width": 1280,
+      "document": 1280,
+      "images": [],
+      "columns": null
+    },
+    {
+      "page": "dashboard",
+      "height": 900,
+      "width": 1280,
+      "document": 1280,
+      "images": [],
+      "columns": "276px 276px 276px 276px"
+    }
+  ],
+  "semantics": [
+    {
+      "page": "index",
+      "doctype": "html",
+      "lang": "es",
+      "charset": "UTF-8",
+      "viewport": true,
+      "h1": 1,
+      "regions": true,
+      "nav": [
+        "index.html",
+        "listado.html",
+        "formulario.html",
+        "dashboard.html"
+      ],
+      "current": 1,
+      "images": true,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Tu bicicleta,en buenas manos."
+        },
+        {
+          "level": "H2",
+          "text": "Cada bici tiene su próxima ruta."
+        },
+        {
+          "level": "H3",
+          "text": "Mantenimiento general"
+        },
+        {
+          "level": "H3",
+          "text": "Frenos y transmisión"
+        },
+        {
+          "level": "H3",
+          "text": "Diagnóstico"
+        },
+        {
+          "level": "H2",
+          "text": "Así se coordina el cuidado de tu bici."
+        },
+        {
+          "level": "H3",
+          "text": "Solicitud"
+        },
+        {
+          "level": "H3",
+          "text": "Recolección"
+        },
+        {
+          "level": "H3",
+          "text": "Mantenimiento"
+        },
+        {
+          "level": "H3",
+          "text": "Entrega"
+        },
+        {
+          "level": "H2",
+          "text": "Antes de coordinar"
+        }
+      ]
+    },
+    {
+      "page": "listado",
+      "doctype": "html",
+      "lang": "es",
+      "charset": "UTF-8",
+      "viewport": true,
+      "h1": 1,
+      "regions": true,
+      "nav": [
+        "index.html",
+        "listado.html",
+        "formulario.html",
+        "dashboard.html"
+      ],
+      "current": 1,
+      "images": true,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Solicitudes de servicio"
+        },
+        {
+          "level": "H2",
+          "text": "Cómo leer los estados"
+        }
+      ]
+    },
+    {
+      "page": "formulario",
+      "doctype": "html",
+      "lang": "es",
+      "charset": "UTF-8",
+      "viewport": true,
+      "h1": 1,
+      "regions": true,
+      "nav": [
+        "index.html",
+        "listado.html",
+        "formulario.html",
+        "dashboard.html"
+      ],
+      "current": 1,
+      "images": true,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Contanos sobre tu bici."
+        }
+      ]
+    },
+    {
+      "page": "dashboard",
+      "doctype": "html",
+      "lang": "es",
+      "charset": "UTF-8",
+      "viewport": true,
+      "h1": 1,
+      "regions": true,
+      "nav": [
+        "index.html",
+        "listado.html",
+        "formulario.html",
+        "dashboard.html"
+      ],
+      "current": 1,
+      "images": true,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Cada solicitud cuenta."
+        },
+        {
+          "level": "H2",
+          "text": "Solicitudes"
+        },
+        {
+          "level": "H2",
+          "text": "Pendientes"
+        },
+        {
+          "level": "H2",
+          "text": "En atención"
+        },
+        {
+          "level": "H2",
+          "text": "Completadas"
+        },
+        {
+          "level": "H2",
+          "text": "Una fotografía del listado"
+        }
+      ]
+    }
+  ],
+  "keyboard": [
+    {
+      "page": "index",
+      "visited": [
+        "Saltar al contenido principal",
+        "bicipediaCR / SERVICIO DE BICICLETAS",
+        "Inicio",
+        "Solicitudes",
+        "Nueva solicitud",
+        "Dashboard"
+      ],
+      "skipLink": true,
+      "visibleOutline": "3px",
+      "reverseTab": true,
+      "enterNavigation": true
+    },
+    {
+      "page": "listado",
+      "visited": [
+        "Saltar al contenido principal",
+        "bicipediaCR / SERVICIO DE BICICLETAS",
+        "Inicio",
+        "Solicitudes",
+        "Nueva solicitud",
+        "Dashboard"
+      ],
+      "skipLink": true,
+      "visibleOutline": "3px",
+      "reverseTab": true,
+      "enterNavigation": true
+    },
+    {
+      "page": "formulario",
+      "visited": [
+        "Saltar al contenido principal",
+        "bicipediaCR / SERVICIO DE BICICLETAS",
+        "Inicio",
+        "Solicitudes",
+        "Nueva solicitud",
+        "Dashboard"
+      ],
+      "skipLink": true,
+      "visibleOutline": "3px",
+      "reverseTab": true,
+      "enterNavigation": true
+    },
+    {
+      "page": "dashboard",
+      "visited": [
+        "Saltar al contenido principal",
+        "bicipediaCR / SERVICIO DE BICICLETAS",
+        "Inicio",
+        "Solicitudes",
+        "Nueva solicitud",
+        "Dashboard"
+      ],
+      "skipLink": true,
+      "visibleOutline": "3px",
+      "reverseTab": true,
+      "enterNavigation": true
+    }
+  ],
+  "errors": [],
+  "form": {
+    "controls": [
+      {
+        "id": "nombre",
+        "name": "nombre",
+        "type": "text",
+        "labels": 1,
+        "required": true,
+        "autocomplete": "given-name"
+      },
+      {
+        "id": "apellido",
+        "name": "apellido",
+        "type": "text",
+        "labels": 1,
+        "required": true,
+        "autocomplete": "family-name"
+      },
+      {
+        "id": "correo",
+        "name": "correo",
+        "type": "email",
+        "labels": 1,
+        "required": true,
+        "autocomplete": "email"
+      },
+      {
+        "id": "telefono",
+        "name": "telefono",
+        "type": "tel",
+        "labels": 1,
+        "required": false,
+        "autocomplete": "tel"
+      },
+      {
+        "id": "servicio",
+        "name": "servicio",
+        "type": "select-one",
+        "labels": 1,
+        "required": true,
+        "autocomplete": ""
+      },
+      {
+        "id": "fecha",
+        "name": "fecha",
+        "type": "date",
+        "labels": 1,
+        "required": false,
+        "autocomplete": ""
+      },
+      {
+        "id": "comentarios",
+        "name": "comentarios",
+        "type": "textarea",
+        "labels": 1,
+        "required": false,
+        "autocomplete": ""
+      },
+      {
+        "id": "terminos",
+        "name": "terminos",
+        "type": "checkbox",
+        "labels": 1,
+        "required": true,
+        "autocomplete": ""
+      }
+    ],
+    "emptyBlocked": true,
+    "invalidEmailBlocked": true,
+    "keyboardCompleted": true,
+    "networkRequestsOnSubmit": 0,
+    "stored": false
+  },
+  "table": {
+    "caption": "Solicitudes de ejemplo de Bicipedia CR · septiembre de 2026",
+    "rows": 5,
+    "columns": 5,
+    "scope": [
+      "col",
+      "col",
+      "col",
+      "col",
+      "col",
+      "row",
+      "row",
+      "row",
+      "row",
+      "row"
+    ],
+    "keyboardScroll": true
+  },
+  "box": {
+    "width": 276,
+    "boxSizing": "border-box",
+    "padding": "24px",
+    "border": "1px",
+    "margin": "0px",
+    "background": "rgb(35, 59, 50)"
+  },
+  "display": {
+    "dashboard": "grid",
+    "nav": "flex"
+  },
+  "withoutJavaScript": {
+    "navigationAvailable": true,
+    "submitDisabled": true
+  }
+}
