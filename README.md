@@ -1,101 +1,114 @@
-# Bicipedia CR - Semana 1
+# Bicipedia CR - Laboratorio 1
 
-Prototipo estático de servicios técnicos de bicicletas y solicitudes de recolección y entrega a domicilio.
+Tienda virtual académica de servicios y accesorios para bicicletas. Permite armar un carrito, crear solicitudes temporales, buscarlas, editarlas y eliminarlas; el dashboard se actualiza con cada operación.
 
-**Curso:** Proyecto de Ingeniería de Software II.  
-**Profesor:** ERICK EDUARDO CHAVES VIVAS.  
-**Integrantes:** Carlos Andrés Chavarría Quirós; Carlos Josue Angúlo Xie; Marco Vinicio Miranda Miranda.  
-**Autor Git:** Carlos Andres Chavarria Quiros.
+**Curso:** Proyecto de Ingeniería de Software II.
+**Profesor:** Erick Eduardo Chaves Vivas.
+**Grupo:** 3. **Etapa:** E5, integración.
 
-## Alcance
+La propuesta atiende a clientes que seleccionan servicios/accesorios y al personal que revisa las solicitudes durante una demostración. Su operación principal organiza pedidos y sus importes en una sola sesión.
 
-Cuatro vistas de la Tarea Semana 1: inicio, listado de cinco solicitudes ficticias, formulario de ocho controles y dashboard de cuatro métricas. La propuesta de Bicipedia aporta el contexto del negocio. No se implementan backend, base de datos ni autenticación.
+**Integrantes:**
 
-## Ejecución
-
-Abrir una terminal en esta carpeta y ejecutar `py -m http.server 8080`. Visitar http://localhost:8080. Detener con Ctrl+C. También se puede abrir `index.html` directamente.
-
-## Vistas
-
-- `index.html`: presentación y proceso a domicilio.
-- `listado.html`: tabla semántica de cinco solicitudes.
-- `formulario.html`: ocho controles con validación nativa.
-- `dashboard.html`: cuatro métricas estáticas coherentes con el listado.
-
-## Tecnologías
-
-HTML5, CSS3 y un script mínimo que evita el envío del formulario de demostración. No se requieren dependencias ni compilación.
+- Carlos Andrés Chavarría Quirós
+- Carlos Josue Angúlo Xie
+- Marco Vinicio Miranda Miranda
+- Michael Aramis Cabrera Hodgson
 
 Repositorio: https://github.com/AlekLapz/bicipedia-semana-1
 
-## Problema que representa
+## Ejecutar con XAMPP
 
-Bicipedia CR necesita explicar sus servicios y ordenar el primer contacto para coordinar la recolección y entrega de bicicletas a domicilio. Este incremento representa la interfaz inicial de ese proceso con datos ficticios. La caja, facturación, inventario y base de clientes existentes quedan fuera del prototipo.
+1. Copiar la carpeta del proyecto a `C:\xampp\htdocs\bicipedia`. Si se usa el ZIP de entrega, copiar el contenido de `proyecto/` a esa carpeta.
+2. Abrir el panel de XAMPP y arrancar **Apache**.
+3. Visitar **http://localhost/bicipedia/index.php**. Si Apache usa otro puerto, agregarlo después de localhost.
+4. Agregar productos y completar una solicitud. Mantener la misma pestaña durante el CRUD.
+
+PHP 8.2 o posterior y navegador actual con JavaScript habilitado. No hay dependencias de ejecución ni compilación. No se necesita iniciar MySQL. Un servidor Python o GitHub Pages no ejecuta la validación PHP; abrir los archivos con doble clic tampoco permite probar el flujo completo.
+
+Alternativa de desarrollo, desde la carpeta del proyecto:
+
+```powershell
+& 'C:\xampp\php\php.exe' -S 127.0.0.1:8080 -t .
+```
+
+Visitar http://127.0.0.1:8080/index.php; detener con Ctrl+C. Servidor solo para desarrollo local.
+
+## Cinco secciones
+
+| Sección | Comportamiento |
+| --- | --- |
+| Inicio | Identidad, proceso y aviso de temporalidad |
+| Catálogo | Cuatro productos precargados; búsqueda, categoría y altas al carrito |
+| Solicitud | Cantidades, retiro/domicilio, cálculo y formulario de creación/edición |
+| Solicitudes | Listado dinámico, búsqueda, filtro, estados, edición y eliminación confirmada |
+| Dashboard | Conteos e importe total calculados desde los registros actuales |
+
+Se usa `index.php` con navegación por anclas para conservar el mismo arreglo JavaScript entre secciones. Los cuatro HTML de Semana 1 redirigen a la sección correspondiente.
+
+## Funciones implementadas
+
+- Crear tras validar en JavaScript y PHP; IDs consecutivos como BIC-001.
+- Consultar por código, cliente, correo o producto; filtrar por estado y mostrar estados vacíos.
+- Editar conservando el ID; cancelar sin modificar el original y cambiar el estado.
+- Eliminar después de confirmar; cancelar conserva el registro.
+- Carrito con cantidades enteras de 1 a 20, eliminación de líneas y vaciado confirmado.
+- Calcular subtotal, impuesto simulado del 13 %, recolección ficticia de ₡2.500 cuando corresponde y total; recalcular al modificar carrito y solicitudes.
+- Rechazar campos inválidos, fechas pasadas/imposibles y cantidades/productos manipulados. PHP calcula desde sus precios, ignorando importes enviados por el cliente.
+- Conservar el borrador ante fallos de PHP y evitar el envío doble.
+- HTML semántico, etiquetas y mensajes accesibles, Flexbox/Grid y tabla desplazable con teclado.
+
+Precios, impuesto y recargo son valores de demostración; no representan una cotización, factura ni operación comercial real.
+
+## Datos temporales
+
+`estado.solicitudes` y `estado.carrito`, en `js/app.js`, viven exclusivamente en memoria JavaScript. Cambiar entre secciones conserva los datos. **Recargar, cerrar o abrir otra pestaña empieza con cero solicitudes y el carrito vacío.**
+
+PHP recibe POST, valida, calcula con su catálogo y devuelve JSON. No guarda registros. No se usan base de datos, sesiones, cookies de aplicación, archivos de registros, localStorage, sessionStorage, IndexedDB ni servicios externos. Los JSON del repositorio contienen configuración o resultados de pruebas, no solicitudes persistidas.
 
 ## Estructura
 
 ```text
-chavarria-carlos-semana-1/
-├── index.html
-├── listado.html
-├── formulario.html
-├── dashboard.html
-├── css/styles.css
-├── js/formulario.js
-├── assets/
-│   ├── images/bicicleta.svg
-│   ├── audio/.gitkeep
-│   └── video/.gitkeep
-├── docs/
-│   ├── decisiones.md
-│   ├── pruebas.md
-│   ├── lista-verificacion.md
-│   └── evidencias/
-├── .gitignore
-└── README.md
+index.php                  Cinco secciones semánticas
+index.html y otros HTML    Entradas de compatibilidad con Semana 1
+css/styles.css             Estilos y adaptación a pantallas
+js/datos-iniciales.js       Catálogo, estados y cálculo en céntimos
+js/validaciones.js          Validación del formulario en cliente
+js/app.js                  Estado, DOM, CRUD, eventos y POST
+php/catalogo.php           Catálogo estático de servidor
+php/validar.php            Validación y respuesta JSON sin persistencia
+assets/images/             Ilustración local
+docs/                      Decisiones, verificación y guía de defensa
+evidencias/capturas/        Ocho capturas actuales
+evidencias/pruebas.pdf      Informe de pruebas
+evidencias/resultados.json Resultado automatizado
+tests/laboratorio.mjs      Pruebas opcionales PHP y navegador
 ```
 
-Las carpetas de audio y video se conservan vacías para respetar la estructura requerida; la tarea no exige contenido multimedia. La ilustración SVG local representa puntos de revisión de una bicicleta y no requiere descargas externas.
+`docs/evidencias/` conserva evidencia histórica de Semana 1; las pruebas actuales están en `evidencias/`.
 
-## Resumen de cinco decisiones
+## Pruebas
 
-1. Regiones semánticas y tarjetas `article` para comunicar el propósito del contenido.
-2. Mobile First, navegación Flexbox y dashboard Grid de una, dos o cuatro columnas.
-3. Ocho controles nativos con etiquetas visibles y agrupación `fieldset`/`legend`.
-4. Tabla semántica dentro de una región desplazable mediante teclado.
-5. Foco visible, salto al contenido y ayudas asociadas a los controles.
+Se aprobaron **14 grupos de pruebas** con PHP 8.5.11 y Microsoft Edge mediante Playwright: CRUD, validación cliente/servidor, cálculos, manipulación de entradas, texto seguro, fallos HTTP, doble envío, navegación y reinicio de memoria. Las cinco secciones se comprobaron a **320, 375, 768, 1024 y 1280 px**. Se probó el servidor de desarrollo PHP; la ejecución bajo Apache/XAMPP queda para verificar en los equipos del grupo.
 
-La justificación y el requisito que satisface cada decisión están en [docs/decisiones.md](docs/decisiones.md).
+Pruebas opcionales: Node 20 o posterior, PHP y Edge:
 
-## Comportamiento del formulario
+```powershell
+npm install
+$env:PHP_BIN='C:\xampp\php\php.exe'
+npm test
+```
 
-Nombre, apellido, correo, servicio y aceptación son obligatorios. Teléfono, fecha y comentarios son opcionales, como permite la guía. Los comentarios pueden describir la bicicleta, el problema, la zona y el horario preferido usando datos ficticios.
+Si no se dispone de Edge, configurar BROWSER_PATH con el ejecutable Chromium/Chrome. BASE_URL permite probar un servidor ya iniciado, por ejemplo http://localhost/bicipedia. La suite sustituye capturas y resultados; el informe PDF corresponde a la ejecución registrada en él.
 
-El botón **Probar solicitud** usa la validación HTML del navegador. Un script de nueve líneas cancela el envío y enfoca un mensaje que confirma únicamente la validación. No se guardan datos, no se modifica el listado y no se calculan métricas. Sin JavaScript, la navegación funciona y el botón permanece deshabilitado con una explicación visible.
+Ver [detalle y diez casos mínimos](docs/pruebas.md), [verificación de requisitos](docs/lista-verificacion.md), [decisiones](docs/decisiones.md) y [guía de defensa](docs/defensa.md).
 
-## Pruebas y evidencias
+## Entrega y pendientes
 
-- [Registro de pruebas](docs/pruebas.md) y [lista de verificación](docs/lista-verificacion.md).
-- [Inicio a 320 px](docs/evidencias/index-320.png), [375 px](docs/evidencias/index-375.png), [768 px](docs/evidencias/index-768.png) y [1280 px](docs/evidencias/index-1280.png).
-- [Formulario recorrido mediante teclado](docs/evidencias/formulario-foco-teclado.png).
-- [Resultado de validación](docs/evidencias/formulario-validado.png).
-- [DevTools: Box Model](docs/evidencias/devtools-box-model.png), [cambio temporal en Styles](docs/evidencias/devtools-cambio-temporal.png) y [regla ganadora en Computed](docs/evidencias/devtools-regla-display.png).
-- [Resultados de las comprobaciones](docs/evidencias/comprobaciones.json) y [contrastes medidos](docs/evidencias/contraste.json).
-- [Historial de cuatro commits](docs/evidencias/historial-commits.png) y [salida original de Git](docs/evidencias/historial-commits.txt).
+`GRUPO03_BICIPEDIA_E5.zip` organiza `proyecto/`, `evidencias/capturas/`, `evidencias/pruebas.pdf` y este README en la raíz. Excluye .git, dependencias, instaladores y documentos originales del profesor.
 
-Se comprobaron las cuatro vistas en 320, 375, 768, 1024 y 1280 px, la navegación mediante teclado, la estructura de tabla y formulario, la validación nativa y la consola. Las capturas de página completa conservan el ancho de prueba; su altura puede superar la del viewport.
+El alcance funcional está implementado. El grupo debe comprobar su XAMPP, ensayar la defensa y completar los aportes reales de cada integrante en `docs/defensa.md`. La distribución incluida es una propuesta, no una afirmación de trabajo realizado. El correo aportado ubica la defensa del Grupo 3 el 12 de octubre de 2026 a las 6:00 p. m.; confirmar cualquier actualización del docente.
 
-## Versionado y entrega
+## Fuentes del alcance
 
-El repositorio contiene cuatro incrementos: estructura, responsive, accesibilidad y documentación. Todos utilizan la identidad Git de Carlos y los mensajes proporcionados por el usuario. Consultar `git log --oneline` y `git status` para verificar el historial y el estado actual.
-
-La captura del historial muestra autores y mensajes obtenidos directamente de `git log`; omite los hashes para poder incorporar la evidencia al mismo cuarto commit sin invalidar la captura. El ZIP `chavarria-carlos-semana-1.zip` incluye la carpeta completa del proyecto, sus fuentes, documentación y evidencias. El historial Git se consulta en el repositorio enlazado, por lo que la carpeta interna `.git` no se incluye en el ZIP.
-
-El nombre de la carpeta y del ZIP utiliza el apellido y nombre de Carlos para seguir `apellido-nombre-semana-1`; los tres integrantes se identifican al comienzo de este README.
-
-## Fuentes de los requisitos
-
-- `Tarea_Semana_1.pdf`, proporcionado por el usuario: define el alcance evaluado.
-- Propuesta de prefactibilidad de Bicipedia CR, proporcionada como `pasted-text.txt`: orienta únicamente el contexto del negocio.
-
-No se implementan los módulos futuros de la propuesta final ni se afirman horarios, cobertura o costos reales del negocio.
+`Laboratorio 1.pdf` y el mensaje del docente aportados por el usuario definen requisitos y entrega. Los materiales de Semana 1, TaskFlow y PHP orientan conceptos y ejecución local. Bicipedia se conserva como identidad y se adapta al dominio permitido de **tienda virtual**. Java no se incorpora porque no es exigido por este laboratorio.

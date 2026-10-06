@@ -1,0 +1,9 @@
+{
+  "name": "bicipedia-laboratorio-1",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pruebas opcionales; la aplicación no requiere Node ni un proceso de compilación.",
+  "scripts": { "test": "node tests/laboratorio.mjs" },
+  "devDependencies": { "playwright": "1.62.1" }
+}

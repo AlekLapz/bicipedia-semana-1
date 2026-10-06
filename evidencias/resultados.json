@@ -1,0 +1,61 @@
+{
+  "fecha": "2026-10-06T20:58:35.208Z",
+  "casos": [
+    {
+      "prueba": "PHP: POST válido, sin cookies, sin cache y con importes calculados por servidor",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "PHP: catálogo y cálculos coinciden con JavaScript para cada producto y modalidad",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "PHP: entradas inválidas, producto inexistente, cantidades, duplicados y fechas se rechazan",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Inicio limpio y cinco secciones accesibles",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Catálogo: búsqueda, filtro y mensaje sin resultados",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Carrito: altas, cantidades, límites, eliminación y navegación sin recarga",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Formulario vacío no registra ni envía; crear valida por PHP y actualiza listado/dashboard",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Búsqueda existente/inexistente y filtros por estado",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Edición cancelable, mismo ID, totales y métricas actualizados; texto del usuario seguro",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Fallo HTTP conserva el carrito y no crea registros; reintento y doble envío crean solo uno",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Responsive: cinco secciones entre 320 y 1280 px, sin desbordamiento de página",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Eliminar: cancelar conserva; confirmar elimina el registro correcto y actualiza métricas",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Nueva pestaña y recarga reinician registros, carrito y dashboard sin almacenamiento",
+      "resultado": "aprobada"
+    },
+    {
+      "prueba": "Entradas anteriores llegan a la sección correcta",
+      "resultado": "aprobada"
+    }
+  ]
+}
