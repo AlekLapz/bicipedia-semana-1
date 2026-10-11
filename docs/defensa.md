@@ -1,5 +1,7 @@
 # Guía de defensa - Bicipedia, Grupo 3
 
+Para entender el proyecto desde cero, usar [la guía completa](guia-defensa.md), también en [Word](Guia_Defensa_Bicipedia_Grupo03.docx) y [PDF](Guia_Defensa_Bicipedia_Grupo03.pdf). Incluye revisión de alcance, instalación, funciones explicadas, cálculo, recorrido, guion y preguntas.
+
 ## Demostración
 
 1. Iniciar Apache y abrir localhost/bicipedia/index.php. Mostrar identidad, cinco secciones y temporalidad.

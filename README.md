@@ -103,6 +103,8 @@ Si no se dispone de Edge, configurar BROWSER_PATH con el ejecutable Chromium/Chr
 
 Ver [detalle y diez casos mínimos](docs/pruebas.md), [verificación de requisitos](docs/lista-verificacion.md), [decisiones](docs/decisiones.md) y [guía de defensa](docs/defensa.md).
 
+Para estudiar desde cero, consultar [guía explicada paso a paso](docs/guia-defensa.md), disponible también en [Word](docs/Guia_Defensa_Bicipedia_Grupo03.docx) y [PDF](docs/Guia_Defensa_Bicipedia_Grupo03.pdf). La [revisión del 10 de octubre](docs/revision-alcance.md) compara requisitos, opciones permitidas y límites, con 14 grupos de pruebas nuevamente aprobados. La aplicación del laboratorio está en la rama `codex/laboratorio-1-bicipedia` mientras el PR 1 no se integre a main.
+
 ## Entrega y pendientes
 
 `GRUPO03_BICIPEDIA_E5.zip` organiza `proyecto/`, `evidencias/capturas/`, `evidencias/pruebas.pdf` y este README en la raíz. Excluye .git, dependencias, instaladores y documentos originales del profesor.
