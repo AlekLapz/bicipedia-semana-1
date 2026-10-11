@@ -132,6 +132,53 @@ input::placeholder { color: #65705f; opacity: 1; }
   fieldset { padding: 1.5rem; }
 }
 
+/* Laboratorio 1: las cinco secciones comparten el mismo estado temporal. */
+.nav-count { display: inline-block; min-width: 1.4rem; margin-left: 0.2rem; padding: 0.05rem 0.25rem; border: 1px solid currentColor; border-radius: 1rem; font-size: 0.75rem; text-align: center; }
+.session-banner { display: flex; gap: 0.6rem; align-items: flex-start; padding-block: 1rem; font-size: 0.8rem; color: var(--muted); border-bottom: 1px solid var(--line); }
+.session-dot { flex-shrink: 0; width: 0.5rem; height: 0.5rem; border-radius: 50%; margin-top: 0.35rem; background: var(--accent); }
+.filters { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; margin-block: 1.5rem; }
+.catalog-grid { grid-template-columns: minmax(0, 1fr); }
+.catalog-grid .service-card { display: flex; flex-direction: column; gap: 1rem; }
+.catalog-grid h2 { font-size: 1.5rem; letter-spacing: -0.025em; }
+.catalog-grid .eyebrow { margin: 0; }
+.catalog-grid button { margin-top: auto; }
+.product-price { font-size: 1.6rem; font-weight: 700; color: var(--ink) !important; }
+.section-note { margin-block: 1.25rem; }
+.button-secondary { color: var(--ink); background: var(--white); border-color: #788575; }
+.button-secondary:hover { color: var(--white); background: var(--ink); border-color: var(--ink); }
+.empty-state { max-width: none; padding: 1.5rem; margin-block: 1rem; border: 1px dashed #788575; border-radius: 0.5rem; background: var(--white); }
+.cart-list { display: grid; gap: 1rem; }
+.cart-item { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+.cart-item h2 { font-size: 1.2rem; letter-spacing: 0; margin-bottom: 0.3rem; }
+.quantity-field { width: 7rem; max-width: 100%; }
+.line-total { font-weight: 700; }
+.cart-item button { justify-self: start; }
+.checkout-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+.order-summary { padding: 1.5rem; border: 1px solid var(--line); background: var(--white); border-radius: 0.75rem; align-self: start; }
+.order-summary h2 { font-size: 1.4rem; }
+.order-summary dl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.75rem; }
+.order-summary dd { margin: 0; text-align: right; color: var(--ink); }
+.order-summary dt:last-of-type, .order-summary dd:last-of-type { padding-top: 0.75rem; border-top: 1px solid var(--line); font-weight: 700; }
+.summary-amount { margin-block: 1rem; font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 700; overflow-wrap: anywhere; }
+.field-error { color: #94331b; }
+.field-error:empty { display: none; }
+[aria-invalid="true"] { border: 2px solid #94331b; }
+.error-message { border-left-color: #94331b; background: #fff0e9; }
+.row-actions { min-width: 10rem; }
+.row-actions button { padding: 0.5rem 0.75rem; font-size: 0.85rem; margin: 0.2rem; }
+.money-cell { white-space: nowrap; font-weight: 600; }
+.table-scroll td p, .table-scroll td small { overflow-wrap: anywhere; }
+#tabla-solicitudes table { min-width: 64rem; }
+#tabla-solicitudes td:nth-child(2) { min-width: 10rem; }
+#tabla-solicitudes td:nth-child(3) { min-width: 14rem; }
+h1[tabindex]:focus { outline: none; }
+@media (min-width: 48rem) {
+  .filters { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+  .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cart-item { grid-template-columns: minmax(0, 1fr) 7rem auto auto; }
+  .checkout-grid { grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr); }
+}
+
 /* Escritorio: cuatro tarjetas, con un ancho máximo para el contenido. */
 @media (min-width: 64rem) {
   .hero { gap: 3.5rem; }
